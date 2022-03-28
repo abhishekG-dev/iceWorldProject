@@ -50,7 +50,7 @@ function EditIceCream() {
         </dl>
         <form >
           <label>Description :</label>
-          <textarea name="description"  cols="30" rows="3"></textarea>
+          <textarea name="description"  cols="50" rows="3"></textarea>
           <label>In Stock :</label>
           <input type="checkbox" name='instock' />
           <label>Quantity :</label>
@@ -64,7 +64,10 @@ function EditIceCream() {
           </select>
           <label>Price* :</label>
           <input type="number" name='price'/>
-          <button type="submit">save</button>
+          <div className="btn_container">
+          <button type="submit" className='ok' >save</button>
+          <button type="button" className='delete' >delete</button>
+          </div>
         </form>
        
         </div>
