@@ -1,8 +1,7 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 
 const app = express()
-app.use(bodyParser.json())
+app.use(express.json())
 
 const iceCreams = [
     { id: 0, name: 'Stripey Madness' },
@@ -103,7 +102,7 @@ const iceCreams = [
   })
 
   app.get('/menu/:id',(req,res)=>{
-    const item = menuData.find(item => item.id === parseInt(req.params.id) ,10)
+    const item = menuData.find(item => item.id === parseInt(req.params.id))
     if(item)res.send(item) 
     else{
     res.status(400)
@@ -111,7 +110,30 @@ const iceCreams = [
     }
   })
 
+  app.put('/menu/:id',(req,res)=>{
+    const intId = parseInt(req.params.id,10)
+    // console.log(intId)
+    const {iceCream, ...rest} =  req.body
+    // console.log(req.body)
+    const updateItem = {
+      id:intId,
+      iceCream:{
+        ...iceCreams.find(item=> item.id === parseInt(iceCream.id))
+      },
+      ...rest
+    }
+    // console.log(updateItem)
+    menuData = menuData.map(menuItem =>{
+      if(menuItem.id === intId)return updateItem
+      return menuItem
+      })
+      res.json(updateItem )
+  })
 
+  app.delete('/menu/:id',(req,res)=>{
+    menuData = menuData.filter(item => item.id !== parseInt(req.params.id))
+    res.send(menuData)
+  })
 
 const PORT = 5000;
 app.listen(PORT,()=>{

@@ -35,6 +35,7 @@ function Menu() {
           quantity={quantity}
           price={price}
           id={id}
+          iceId={iceCream.id}
           />
         </li>)
       )

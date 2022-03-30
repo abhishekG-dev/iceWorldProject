@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom'
 import '../assets/css/card.css'
 import IceCreamImages from './IceCreamImages'
 
-function Card({name,id,desc,price,quantity,history}) {
+function Card({name,id,desc,price,quantity,iceId,history}) {
 
     const handleOnClickCard = to =>{
         history(to)
     }
 
     const handleOnClickName = e =>{
-        e.stopPropogration()
+        e.stopPropagation()
     }
   return (
    <div className="card"  
@@ -19,7 +19,7 @@ function Card({name,id,desc,price,quantity,history}) {
    }}
    >
        <div className="img_container">
-           <IceCreamImages id={id} />
+           <IceCreamImages id={iceId} />
        </div>
        <div className="text_container">
            <Link to={`/menu/${id}`} onClick={handleOnClickName} >
