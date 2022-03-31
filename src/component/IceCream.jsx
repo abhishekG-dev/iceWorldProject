@@ -1,7 +1,7 @@
 import React from 'react'
 import IceCreamImages from './IceCreamImages'
 import '../assets/css/editIceCream.css'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import useUniqIds from '../js files/uniqId'
 import {descriptionValidate,priceValidate,quantityValidate} from '../utiles/validators'
 import useValidation from '../js files/useValidate'
@@ -11,6 +11,9 @@ function IceCream({item,setNewItem}) {
     
     const {inStock,description,iceCream,price,quantity} = item
     const [descriptionId,priceId,quantityId,inStockId]= useUniqIds(4)
+
+    const itemID = useParams().id
+
     const navigate = useNavigate()    
    
     const descriptionError = useValidation(
@@ -41,7 +44,7 @@ function IceCream({item,setNewItem}) {
         setNewItem(newItemData)
         
     }
-
+    // ------  updating a particular item data ------------
     const onSubmitHandler = async(e)=>{
         e.preventDefault()
 
@@ -67,11 +70,9 @@ function IceCream({item,setNewItem}) {
             headers:{'content-type':'application/json',
             'Accept': 'application/json'},
             body: JSON.stringify(submitItem)
-            
         }
-
+        
         try{
-
             await fetch(`/menu/${id.toString()}`,reqData)
             navigate('/')
             
@@ -82,9 +83,16 @@ function IceCream({item,setNewItem}) {
     }   
 
     }
-
-    const onDeleteHandler = (e) =>{
-        e.preventDefault()
+    //  ---deleteing a particular item ------
+    const onDeleteHandler = async() =>{
+        try {await fetch(`/menu/${itemID}`,{
+                method: "DELETE"
+            })
+            navigate('/')
+        }
+        catch(err){
+            console.log(err)
+        }
     }
     
    

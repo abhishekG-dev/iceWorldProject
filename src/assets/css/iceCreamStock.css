@@ -1,5 +1,4 @@
-.main_container{
-    /* border: 1px solid black; */
+.ice_main_container{
     width: 100%;
     /* height: calc(100vh - 11vh); */
     height: auto;
@@ -7,11 +6,9 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    /* padding-top: 10px; */
 }
 
-.menu_container{
-    /* border: 2px solid blue;   */
+.ice_stock_list{
     list-style-type: none;
     margin-top: 50px;
     margin-bottom: 20px;
@@ -29,11 +26,4 @@
     /* padding: 10px; */
     justify-content: center;
     align-items: center;
-    
 }
-/* .menu_container::-webkit-scrollbar{
-    display: none;
-} */
-
-
-

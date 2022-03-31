@@ -12,7 +12,7 @@ function Navbar() {
             Menu
         </NavLink>
         <Header />
-        <NavLink to='/menu/addItem' >Add Item</NavLink>
+        <NavLink to='/menu/stocks/additem' >Add Item</NavLink>
         </div>
     </nav>
     </>
