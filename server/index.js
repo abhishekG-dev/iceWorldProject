@@ -216,14 +216,38 @@ app.get("/menu/:id", (req, res) => {
   }
 });
 
+app.post("/menu", (req, res) => {
+  const { iceCream, ...rest } = req.body;
+  newMenuItem = {
+    id: menuData.reduce((prev, cur) => (cur.id > prev ? cur.id : prev), 0) + 1,
+    iceCream: {
+      ...iceCreams.find((item) => item.id === parseInt(iceCream.id)),
+    },
+    ...rest,
+  };
+  menuData.push(newMenuItem);
+  res.send();
+});
+
 //  iceCreams stock list
 app.get("/menu/stocks/iceCream", (req, res) => {
-  let iceStockList = iceCreams.filter((iceCream) =>
-    !menuData.find((menuItem) => menuItem.iceCream.id === iceCream.id) 
+  let iceStockList = iceCreams.filter(
+    (iceCream) =>
+      !menuData.find((menuItem) => menuItem.iceCream.id === iceCream.id)
   );
   // console.log(iceStockList)
 
   res.send(iceStockList);
+});
+
+app.get("/menu/stocks/iceCream/:id", (req, res) => {
+  const iceCreamDetail = iceCreams
+    .filter(
+      (iceCream) =>
+        !menuData.find((menuItem) => menuItem.iceCream.id === iceCream.id)
+    )
+    .find((iceCream) => iceCream.id === parseInt(req.params.id));
+  res.send(iceCreamDetail);
 });
 
 app.put("/menu/:id", (req, res) => {
@@ -243,7 +267,7 @@ app.put("/menu/:id", (req, res) => {
     if (menuItem.id === intId) return updateItem;
     return menuItem;
   });
-  res.json(updateItem);
+  res.send();
 });
 
 app.delete("/menu/:id", (req, res) => {

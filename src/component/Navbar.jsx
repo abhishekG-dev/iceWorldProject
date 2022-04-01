@@ -1,22 +1,20 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import Header from './Header'
-import '../assets/css/navbar.css'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import Header from "./Header";
+import "../assets/css/navbar.css";
 
 function Navbar() {
   return (
     <>
-    <nav>
+      <nav>
         <div className="navbar">
-        <NavLink to='/'>
-            Menu
-        </NavLink>
-        <Header />
-        <NavLink to='/menu/stocks/additem' >Add Item</NavLink>
+          <NavLink to="/">Menu</NavLink>
+          <Header />
+          <NavLink to="/menu/stocks/additem">Add Item</NavLink>
         </div>
-    </nav>
+      </nav>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

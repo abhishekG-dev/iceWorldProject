@@ -1,166 +1,158 @@
-.mainE_container{
-    width: 100%;
-    height: 89vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid red;    */
+.mainE_container {
+  width: 100%;
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red;    */
 }
-.edit_container{
-    width: 50% ;
-    height: 60%;
-    /* border: 1px solid black; */
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-}  
-
-.edit_img_container{
-    width:25%;
-    /* border: 2px solid black; */
-    border-right: 1px solid rgba(32, 33, 36, 0.1);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    background: #f8f8f8;
+.edit_container {
+  width: 50%;
+  height: 60%;
+  /* border: 1px solid black; */
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
 }
 
-.edit_img_container>img{
-    width: 200px;
+.edit_img_container {
+  width: 25%;
+  /* border: 2px solid black; */
+  border-right: 1px solid rgba(32, 33, 36, 0.1);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  background: #f8f8f8;
 }
 
-.detail_container{
-    width: 75%;
-    height: 100%;
-    /* border: 1px solid green ; */
-    display: flex;
-    justify-content: center ;
-    align-items: center ;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+.edit_img_container > img {
+  width: 200px;
 }
 
-.detailM_container{
-    /* border: 1px solid blue; */
-    width: 90%;
-    height: 90%;
-    display: flex;
-    flex-direction: column ;
-    justify-content: space-evenly;
-    padding: 2rem   ;
-    
+.detail_container {
+  width: 75%;
+  height: 100%;
+  /* border: 1px solid green ; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
-.detailM_container>dl{
-    display: grid ;
-    grid-template-columns: 1fr 3fr;
+
+.detailM_container {
+  /* border: 1px solid blue; */
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+.detailM_container > dl {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   gap: 20px;
-   margin-bottom: 1rem;
-   
+  margin-bottom: 1rem;
 }
-.detailM_container> dl>dt{
-    text-align: end;
-    align-items: center;
-    color: rgba(64, 49, 71, 0.8);
-
+.detailM_container > dl > dt {
+  text-align: end;
+  align-items: center;
+  color: rgba(64, 49, 71, 0.8);
 }
-.detailM_container> dl>dd{ justify-self: left;
-        align-self: center;
-        margin: 0;
-        text-align: left;   }
-
-
-.detailM_container>form{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    height: 90% ;
-    /* border: 1px solid red; */
-    gap: 20px;
-    
+.detailM_container > dl > dd {
+  justify-self: left;
+  align-self: center;
+  margin: 0;
+  text-align: left;
 }
 
-.detailM_container>form>.checkbox{
-    display: flex;
-    align-items: center;
+.detailM_container > form {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 90%;
+  /* border: 1px solid red; */
+  gap: 20px;
 }
 
-.checkbox>input[type="checkbox"]{
-    width: 20px;
-    height: 20px; 
-    cursor: pointer;  
-}
-.detailM_container>form>select{
-    height: 40px;
-    border-radius: 5px;
-    outline: none;
-    font-size: 18px;
-    background-color: white;
-    padding: 10px;
-    font-weight:100;
-    font-size: 14px;
+.detailM_container > form > .checkbox {
+  display: flex;
+  align-items: center;
 }
 
-
-.detailM_container>form>label{
-    justify-self: right;
-        align-self: start;
-        color: rgba(64, 49, 71, 0.8);
-        line-height: 2.375em;
-        /* border: 1px solid black; */
+.checkbox > input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.detailM_container > form > select {
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 18px;
+  background-color: white;
+  padding: 10px;
+  font-weight: 100;
+  font-size: 14px;
 }
 
-
-
-.detailM_container>form>textarea{
-        outline: none;
-        border-radius: 5px;
-        font-size: 14px;
-        resize: vertical;
-        padding: 10px;
+.detailM_container > form > label {
+  justify-self: right;
+  align-self: start;
+  color: rgba(64, 49, 71, 0.8);
+  line-height: 2.375em;
+  /* border: 1px solid black; */
 }
 
-
-.detailM_container>form>input[type='number']{
-    outline:none;
-    border: 1px solid grey  ;
-    height: 40px;
-    border-radius: 5px; 
-    padding-left: 15px;
+.detailM_container > form > textarea {
+  outline: none;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: vertical;
+  padding: 10px;
 }
 
-.btn_container{
-    grid-column: 2;
-    /* border:1px solid red; */
-    display: flex;
-
-
-    align-items: center;
-    margin-bottom: 10px;
+.detailM_container > form > input[type="number"] {
+  outline: none;
+  border: 1px solid grey;
+  height: 40px;
+  border-radius: 5px;
+  padding-left: 15px;
 }
 
-.btn_container>button{
-    width: 70px;
-    height: 30px;
-    font-size: 17px;
-    font-weight: bolder;
+.btn_container {
+  grid-column: 2;
+  /* border:1px solid red; */
+  display: flex;
 
+  align-items: center;
+  margin-bottom: 10px;
 }
 
-.ok{
-    color: white;
-    background-color: rgb(8, 132, 148);
-    border-radius: 15px;
-    border: none;
-    margin-right: 10px;
-    cursor: pointer;
+.btn_container > button {
+  width: 70px;
+  height: 30px;
+  font-size: 17px;
+  font-weight: bolder;
 }
 
-.delete{
-    color: white;
-    background-color: rgb(148, 17, 8);
-    border-radius: 15px;
-    border: none;
+.ok {
+  color: white;
+  background-color: rgb(8, 132, 148);
+  border-radius: 15px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.delete {
+  color: white;
+  background-color: rgb(148, 17, 8);
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
 }
