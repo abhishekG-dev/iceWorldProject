@@ -90,6 +90,8 @@ function IceCream({ item, setNewItem }) {
     }
   };
 
+  
+//   const add = true;
   const data = {
     onSubmit: onSubmitHandler,
     descriptionId,
@@ -102,6 +104,7 @@ function IceCream({ item, setNewItem }) {
     price,
     quantity,
     onChangeHandler,
+    add:true
   };
 
   return (

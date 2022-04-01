@@ -16,12 +16,14 @@ function IceCreamDetailsPage({ data, onDelete }) {
     price,
     quantity,
     onChangeHandler,
+    add
   } = data;
 
   return (
     <>
       <Helmet>
-        <title>Edit | ice world</title>
+       {add ?  <title>Edit | Ice World</title>  
+       :<title>Add | Ice World</title> }
       </Helmet>
 
       <div className="mainE_container">

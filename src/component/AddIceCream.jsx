@@ -121,6 +121,7 @@ function AddIceCream() {
     price,
     quantity,
     onChangeHandler,
+    add:false
   };
 
   return (

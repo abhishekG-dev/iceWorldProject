@@ -1,4 +1,5 @@
 import React from "react";
+// import Helmet from "react-helmet";
 import { Link } from "react-router-dom";
 import "../assets/css/iceCreamCard.css";
 import IceCreamImages from "./IceCreamImages";
@@ -14,6 +15,7 @@ function IceCreamCard({ iceID, iceName, navigate }) {
 
   return (
     <>
+    
       <div
         className="ice_card"
         onClick={() => {
